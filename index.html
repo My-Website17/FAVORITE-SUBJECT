@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="tl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Grade 10 ESP Learning Website</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fb;
+            color: #263238;
+            line-height: 1.6;
+        }
+
+        /* HEADER */
+        header {
+            background: linear-gradient(135deg, #3949ab, #5e35b1);
+            color: white;
+            padding: 25px 15px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            font-size: 15px;
+        }
+
+        /* NAVIGATION */
+        nav {
+            background: #ffffff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            display: block;
+            text-decoration: none;
+            color: #3949ab;
+            font-weight: bold;
+            padding: 14px 10px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            background: #3949ab;
+            color: white;
+        }
+
+        /* MAIN */
+        main {
+            width: 100%;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        section {
+            padding: 45px 18px;
+        }
+
+        section h2 {
+            text-align: center;
+            color: #3949ab;
+            margin-bottom: 25px;
+            font-size: 26px;
+        }
+
+        /* HERO */
+        .hero {
+            text-align: center;
+            background: #e8eaf6;
+            padding: 50px 20px;
+        }
+
+        .hero h2 {
+            color: #303f9f;
+            font-size: 30px;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: auto;
+            font-size: 16px;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 20px;
+            background: #3949ab;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background: #283593;
+        }
+
+        /* CARDS */
+        .cards {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 18px;
+        }
+
+        .card {
+            background: white;
+            padding: 22px;
+            border-radius: 14px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.10);
+        }
+
+        .card h3 {
+            color: #5e35b1;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 15px;
+        }
+
+        .card ul {
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+
+        /* ACTIVITY */
+        .activity {
+            background: #ede7f6;
+        }
+
+        .activity-box {
+            background: white;
+            padding: 22px;
+            margin-bottom: 18px;
+            border-left: 5px solid #5e35b1;
+            border-radius: 8px;
+        }
+
+        .activity-box h3 {
+            color: #4527a0;
+            margin-bottom: 8px;
+        }
+
+        /* RESOURCES */
+        .resource {
+            display: block;
+            background: white;
+            margin-bottom: 12px;
+            padding: 16px;
+            border-radius: 10px;
+            text-decoration: none;
+            color: #303f9f;
+            font-weight: bold;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .resource:hover {
+            background: #e8eaf6;
+        }
+
+        /* ABOUT */
+        .about {
+            text-align: center;
+        }
+
+        .profile {
+            background: white;
+            max-width: 650px;
+            margin: auto;
+            padding: 28px;
+            border-radius: 15px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.10);
+        }
+
+        /* PROFILE PICTURE */
+        .profile-circle {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 18px;
+            background: #5e35b1;
+        }
+
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #263238;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+            font-size: 14px;
+        }
+
+        /* TABLET */
+        @media (min-width: 600px) {
+
+            header h1 {
+                font-size: 36px;
+            }
+
+            nav a {
+                padding: 15px 18px;
+                font-size: 15px;
+            }
+
+            .cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* DESKTOP */
+        @media (min-width: 900px) {
+
+            section {
+                padding: 60px 25px;
+            }
+
+            .cards {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .hero {
+                padding: 80px 30px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>ESP 10</h1>
+        <p>Edukasyon sa Pagpapakatao • Baitang 10</p>
+    </header>
+
+
+    <!-- NAVIGATION -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#lessons">Lessons</a></li>
+            <li><a href="#activities">Activities</a></li>
+            <li><a href="#resources">Resources</a></li>
+            <li><a href="#about">About Me</a></li>
+        </ul>
+    </nav>
+
+
+    <main>
+
+        <!-- HOME -->
+        <section id="home" class="hero">
+
+            <h2>Maligayang Pagdating sa aming Grade 10 ESP Learning Website!</h2>
+
+            <p>
+                Ang website na ito ay ginawa upang makatulong sa mga mag-aaral
+                na mas maunawaan ang mga aralin tungkol sa pagpapakatao,
+                pagpapahalaga, pananagutan, at mabuting pakikipagkapwa.
+            </p>
+
+            <a href="#lessons" class="button">
+                Ang Edukasyon sa Pagpapakatao ay hindi lamang tungkol sa
+                pagsasaulo ng mga konsepto, ito ay tungkol sa paghubog ng
+                ating pagkatao at paggamit ng ating kaalaman sa tunay na buhay.
+            </a>
+
+        </section>
+
+
+        <!-- LESSONS -->
+        <section id="lessons">
+
+            <h2>📚 Mga Aralin</h2>
+
+            <div class="cards">
+
+                <div class="card">
+                    <h3>Aralin 1: Pagpapahalaga</h3>
+                    <p>
+                        Pag-unawa sa kahalagahan ng mga pagpapahalaga sa
+                        paggawa ng tamang desisyon at pagkilos.
+                    </p>
+
+                    <ul>
+                        <li>Pagkilala sa sariling pagpapahalaga</li>
+                        <li>Pagpapakita ng mabuting asal</li>
+                        <li>Paggalang sa kapwa</li>
+                    </ul>
+                </div>
+
+
+                <div class="card">
+                    <h3>Aralin 2: Pananagutan</h3>
+                    <p>
+                        Ang bawat tao ay may pananagutan sa sarili,
+                        pamilya, paaralan, at lipunan.
+                    </p>
+
+                    <ul>
+                        <li>Pagtupad sa tungkulin</li>
+                        <li>Pananagutan sa kilos</li>
+                        <li>Pagiging responsable</li>
+                    </ul>
+                </div>
+
+
+                <div class="card">
+                    <h3>Aralin 3: Pakikipagkapwa</h3>
+                    <p>
+                        Mahalaga ang mabuting ugnayan sa kapwa upang magkaroon
+                        ng mapayapa at maayos na pamayanan.
+                    </p>
+
+                    <ul>
+                        <li>Empatiya</li>
+                        <li>Pakikinig</li>
+                        <li>Paggalang sa pagkakaiba</li>
+                    </ul>
+                </div>
+
+
+                <div class="card">
+                    <h3>Aralin 4: Pagpapasya</h3>
+                    <p>
+                        Matutong gumawa ng matalino, makatarungan,
+                        at responsableng desisyon.
+                    </p>
+
+                    <ul>
+                        <li>Pagsusuri ng sitwasyon</li>
+                        <li>Pagkilala sa bunga ng kilos</li>
+                        <li>Pagpili ng tama</li>
+                    </ul>
+                </div>
+
+
+                <div class="card">
+                    <h3>Aralin 5: Kabutihang Panlahat</h3>
+                    <p>
+                        Ang kabutihang panlahat ay tumutukoy sa mga
+                        bagay na nakatutulong sa kapakanan ng lahat.
+                    </p>
+
+                    <ul>
+                        <li>Pakikilahok sa komunidad</li>
+                        <li>Pagtutulungan</li>
+                        <li>Pagiging mabuting mamamayan</li>
+                    </ul>
+                </div>
+
+
+                <div class="card">
+                    <h3>Aralin 6: Pagiging Mabuting Tao</h3>
+                    <p>
+                        Ang mabuting pagkatao ay naipapakita sa pamamagitan
+                        ng tamang salita, kilos, at pakikitungo sa iba.
+                    </p>
+
+                    <ul>
+                        <li>Katapatan</li>
+                        <li>Paggalang</li>
+                        <li>Pagmamalasakit</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ACTIVITIES -->
+        <section id="activities" class="activity">
+
+            <h2>🎯 Mga Gawain</h2>
+
+            <div class="activity-box">
+                <h3>Gawain 1: Values Reflection</h3>
+                <p>
+                    Maglista ng tatlong pagpapahalaga na mahalaga sa iyo.
+                    Ipaliwanag kung paano mo ito naipapakita sa iyong
+                    pang-araw-araw na buhay.
+                </p>
+            </div>
+
+
+            <div class="activity-box">
+                <h3>Gawain 2: Tama o Mali?</h3>
+                <p>
+                    Magbigay ng limang sitwasyon kung saan kailangang
+                    pumili sa pagitan ng tama at mali. Isulat kung ano
+                    ang iyong magiging desisyon at bakit.
+                </p>
+            </div>
+
+
+            <div class="activity-box">
+                <h3>Gawain 3: Kabutihan Challenge</h3>
+                <p>
+                    Gumawa ng isang simpleng mabuting gawain para sa
+                    iyong pamilya, kaklase, o komunidad.
+                </p>
+            </div>
+
+
+            <div class="activity-box">
+                <h3>Gawain 4: My Decision</h3>
+                <p>
+                    Pumili ng isang sitwasyon na nangangailangan ng
+                    pagpapasya. Tukuyin ang problema, mga pagpipilian,
+                    posibleng bunga, at iyong desisyon.
+                </p>
+            </div>
+
+        </section>
+
+
+        <!-- RESOURCES -->
+        <section id="resources">
+
+            <h2>📖 Learning Resources</h2>
+
+            <a class="resource" href="#">📘 ESP 10 Learning Materials</a>
+            <a class="resource" href="#">📝 Review Notes</a>
+            <a class="resource" href="#">📄 Activity Worksheets</a>
+            <a class="resource" href="#">🎥 Educational Videos</a>
+            <a class="resource" href="#">📚 Mga Karagdagang Babasahin</a>
+
+        </section>
+
+
+        <!-- ABOUT ME -->
+        <section id="about" class="about">
+
+            <h2>👤 About Me</h2>
+
+            <div class="profile">
+
+                <!-- PROFILE IMAGE -->
+                <div class="profile-circle">
+                    <img src="mica.jpg" class="profile-img" alt="Profile Picture">
+                </div>
+
+                <h3>Hi! Ako si Mica L. Sy</h3>
+
+                <p>
+                    Ako ay isang mag-aaral ng Baitang 10-EROS na interesado sa
+                    pag-aaral ng Edukasyon sa Pagpapakatao.
+                </p>
+
+                <br>
+
+                <p>
+                    Ginawa ko ang website na ito upang makapagbahagi ng
+                    mga aralin, gawain, at resources na makatutulong sa
+                    mga kapwa mag-aaral na matuto tungkol sa mabuting
+                    pagpapakatao.
+                </p>
+
+                <br>
+
+                <p>
+                    <strong>Grade:</strong> 10-EROS<br>
+                    <strong>Subject:</strong> ESP
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 ESP 10 Educational Website</p>
+        <p>Learn • Reflect • Act • Become Better</p>
+    </footer>
+
+</body>
+</html>
